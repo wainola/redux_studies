@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import {Container, Header, Divider} from 'semantic-ui-react'
-import AddTodo from './containers/AddTodo';
-import VisibleTodoList from './containers/VisibleTodoList';
-import Footer from './components/Footer';
+import Main from './components/Main'
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Login from './containers/Login'
 
 class App extends Component {
   render() {
     return (
-      <Container textAlign='center'>
-        <Header as='h1'>Redux Todo</Header>
-        <Divider />
-        <AddTodo />
-        <VisibleTodoList />
-        <Footer />
-      </Container>
+    <Router>
+      <div>
+        <Route exact path='/' component={Main} />
+        <Route exact path='/Login' component={Login}/>
+      </div>
+    </Router>
     );
   }
 }
