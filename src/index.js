@@ -7,9 +7,9 @@ import registerServiceWorker from './registerServiceWorker';
 // REDUX SETUP
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import todoApp from './reducers'
+import reducers from './reducers'
 
-const store = createStore(todoApp)
+const store = createStore(reducers)
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();

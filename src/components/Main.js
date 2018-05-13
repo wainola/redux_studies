@@ -4,9 +4,10 @@ import {
   Header,
   Divider
 } from 'semantic-ui-react'
-import AddTodo from '../containers/AddTodo';
-import VisibleTodoList from '../containers/VisibleTodoList';
-import Footer from './Footer';
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
+import Footer from './Footer'
+import AuthenticationToggle from '../containers/AuthenticationToggle'
 import {Link} from 'react-router-dom'
 
 const Main = () => (
@@ -17,6 +18,9 @@ const Main = () => (
     <VisibleTodoList />
     <Footer />
     <Link to='login'>Login</Link>
+    <br/>
+    <h3>Toggle for login: </h3>
+    <AuthenticationToggle />
   </Container>
 )
 
