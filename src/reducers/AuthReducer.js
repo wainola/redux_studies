@@ -1,7 +1,7 @@
 import { LOG_STATE } from '../actions/types'
 
 const initialState = {
-  auth: false
+  auth: true
 }
 
 export default function(state=initialState, action){
