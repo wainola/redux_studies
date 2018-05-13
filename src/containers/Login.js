@@ -1,7 +1,22 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {Route, Redirect} from 'react-router-dom'
+import GuestRoute from './GuestRoute'
 
-const Login = () => (
-  <div>Login</div>
-)
+class Login extends React.Component{
+  render(){
+    console.log(this.props)
+    return(
+      <div>
+        <h1>Login</h1>
+        <Route render={this.props.auth ? <Redirect to='/dashboard' /> : <GuestRoute />} />
+      </div>
+    )
+  }
+}
 
-export default Login
+function mapStateToProps({authState}){
+  return {authState}
+}
+
+export default connect(mapStateToProps)(Login)
