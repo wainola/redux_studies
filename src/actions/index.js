@@ -1,4 +1,11 @@
-import { LOG_STATE, GET_EMPLOYEES, GET_SALARIES } from './types'
+import {
+  LOG_STATE,
+  GET_EMPLOYEES,
+  GET_SALARIES,
+  GET_ALL_MEN,
+  GET_ALL_WOMEN,
+  GET_ALL_EMPLOYEES
+} from './types'
 import axios from 'axios'
 
 let nextTodoId = 0
@@ -54,5 +61,29 @@ export const GetSalaries = () => {
         payload: response.data 
       })
     })
+  }
+}
+
+export const GetAllMen = (data_emps) => {
+  console.log('GetAllMens action', data_emps)
+  return {
+    type: GET_ALL_MEN,
+    payload: data_emps
+  }
+}
+
+export const GetAllWomen = (data_emps) => {
+  console.log('GetlAllWomen action', data_emps)
+  return {
+    type: GET_ALL_WOMEN,
+    payload: data_emps
+  }
+}
+
+export const GetAllEmployes = (data_emps) => {
+  console.log('GetAllEmployees action', data_emps)
+  return {
+    type: GET_ALL_EMPLOYEES,
+    payload: data_emps
   }
 }

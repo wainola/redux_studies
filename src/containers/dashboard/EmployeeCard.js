@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 class EmployeeCard extends Component {
   renderEmps(){
-    this.props.EmpsData.emps.map(e => console.log(e))
+    // this.props.EmpsData.emps.map(e => console.log(e))
     return this.props.EmpsData.emps.map(e => 
       <Card key={e.emp_no}>
         <Image src='https://media.giphy.com/media/3o6ZtbWOMJAm4iwtPi/giphy.gif' />
@@ -15,6 +15,7 @@ class EmployeeCard extends Component {
           <span className='date'>
             Nacido el: {e.birth_date}
           </span>
+          <Header as='h4'>Genero: {e.gender}</Header>
         </Card.Meta>
       </Card>
     )
@@ -25,6 +26,8 @@ class EmployeeCard extends Component {
       <Container>
         {this.props.EmpsData.emps ? 
           <div>
+            <Header as='h3'>Conteo: {this.props.EmpsData.emps.length}</Header>
+              <br/>
             <Card.Group itemsPerRow={3}>
               {this.renderEmps()}
             </Card.Group>

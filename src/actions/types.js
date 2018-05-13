@@ -1,3 +1,6 @@
 export const LOG_STATE = 'log_state'
 export const GET_EMPLOYEES = 'get_employees'
 export const GET_SALARIES = 'get_salaries'
+export const GET_ALL_MEN = 'get_all_men'
+export const GET_ALL_WOMEN = 'get_all_women'
+export const GET_ALL_EMPLOYEES = 'get_all_employees'

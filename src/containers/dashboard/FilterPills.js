@@ -20,7 +20,7 @@ class FilterPills extends Component {
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({GetEmployees, GetSalaries}, dispatch);
+  return bindActionCreators({GetEmployees, GetSalaries}, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(FilterPills)
