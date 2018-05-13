@@ -6,10 +6,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 // REDUX SETUP
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore , applyMiddleware } from 'redux'
 import reducers from './reducers'
+import reduxThunk from 'redux-thunk'
 
-const store = createStore(reducers)
+const store = createStore(reducers, applyMiddleware(reduxThunk))
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
