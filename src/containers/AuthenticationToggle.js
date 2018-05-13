@@ -6,11 +6,18 @@ import { AuthToggle } from '../actions/index'
 import {bindActionCreators} from 'redux'
 
 class AuthenticationToggle extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      isAuthenticated: this.props.authState.auth
+    }
+  }
   onHandleChange(){
-    this.props.AuthToggle(true)
+    this.props.AuthToggle(!this.state.isAuthenticated)
+    this.setState({isAuthenticated: !this.state.isAuthenticated})
   }
   render(){
-    console.log(this.props)
+    console.log('auhtToggle', this.state.isAuthenticated)
     return(
       <Checkbox toggle onChange={this.onHandleChange.bind(this)} />
     )
