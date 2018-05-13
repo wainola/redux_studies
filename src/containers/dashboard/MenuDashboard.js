@@ -13,7 +13,7 @@ class MenuDashboard extends Component {
           active={activeItem === 'editorials'}
           onClick={this.handleItemClick}
         >
-          Menu1
+          Hombres
         </Menu.Item>
 
         <Menu.Item
@@ -21,7 +21,7 @@ class MenuDashboard extends Component {
           active={activeItem === 'reviews'}
           onClick={this.handleItemClick}
         >
-          Menu2
+          Mujeres
         </Menu.Item>
 
         <Menu.Item
@@ -29,7 +29,7 @@ class MenuDashboard extends Component {
           active={activeItem === 'upcomingEvents'}
           onClick={this.handleItemClick}
         >
-          Menu3
+          Altos Salarios
         </Menu.Item>
       </Menu>
     )
